@@ -17,7 +17,7 @@
     },
     "require": {
         "contao/core-bundle": "^4.13",
-        "terminal42/notification_center": "^1.7"
+        "terminal42/notification_center": "^1.6"
     },
     "autoload":{
         "psr-4": {
