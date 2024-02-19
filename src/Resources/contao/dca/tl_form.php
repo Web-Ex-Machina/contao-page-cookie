@@ -11,7 +11,7 @@ $GLOBALS['TL_DCA']['tl_form']['config']['ctable'][] = 'tl_form_cookie';
 $GLOBALS['TL_DCA']['tl_form']['palettes']['__selector__'][] = 'cpc_generateCookie';
 
 // Handle checkbox subpalette
-$GLOBALS['TL_DCA']['tl_form']['subpalettes']['cpc_generateCookie'] = 'cpc_cookieName,cpc_cookieValue,cpc_cookieDuration,cpc_generateWhen';
+$GLOBALS['TL_DCA']['tl_form']['subpalettes']['cpc_generateCookie'] = 'cpc_cookieName,cpc_cookieValue,cpc_cookieDuration,cpc_generateWhen,cpc_hideIfActiveCookie';
 
 // Adjust tl_form palettes
 PaletteManipulator::create()
@@ -52,4 +52,10 @@ $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_generateWhen'] = [
 	'options' => ['whenFormIsSubmitted', 'whenProtectedPageIsReached'],
 	'eval' => array('helpwizard'=>true, 'tl_class'=>'w50'),
 	'sql' => "varchar(32) NOT NULL default 'raw'"
+];
+$GLOBALS['TL_DCA']['tl_form']['fields']['cpc_hideIfActiveCookie'] = [
+	'exclude' => true,
+	'filter' => true,
+	'inputType' => 'checkbox',
+	'sql' => "char(1) NOT NULL default ''"
 ];
