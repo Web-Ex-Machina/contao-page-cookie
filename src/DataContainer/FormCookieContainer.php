@@ -13,7 +13,7 @@ class FormCookieContainer
             $r['name'],
             $r['value'],
             $r['createdAt'],
-            $r['expiresAt'],
+            $r['duration'],
         );
     }
 }
