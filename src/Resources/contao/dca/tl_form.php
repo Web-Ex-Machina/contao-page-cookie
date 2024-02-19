@@ -49,7 +49,7 @@ $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_cookieDuration'] = [
 $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_generateWhen'] = [
 	'exclude' => true,
 	'inputType' => 'select',
-	'options' => ['whenFormIsSubmitted', 'whenProtectedPageIsReached']
+	'options' => ['whenFormIsSubmitted', 'whenProtectedPageIsReached'],
 	'eval' => array('helpwizard'=>true, 'tl_class'=>'w50'),
 	'sql' => "varchar(32) NOT NULL default 'raw'"
 ];
