@@ -1,0 +1,39 @@
+{
+    "name": "webexmachina/contao-page-cookie",
+    "description": "Contao Page Cookie bundle for Contao Open Source CMS",
+    "type": "contao-bundle",
+    "license": "LGPL-3.0-or-later",
+    "website" : "https://www.webexmachina.fr/",
+    "authors": [
+        {
+            "name": "Web ex Machina",
+            "homepage": "https://www.webexmachina.fr",
+            "role":"Developer"
+        }
+    ],
+    "support":{
+        "issues":"https://github.com/webexmachina/contao-page-cookie/issues",
+        "source":"https://github.com/webexmachina/contao-page-cookie"
+    },
+    "require": {
+        "contao/core-bundle": "^4.13",
+        "terminal42/notification_center": "^1.7"
+    },
+    "autoload":{
+        "psr-4": {
+            "ContaoPageCookieBundle\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    },
+    "extra":{
+        "contao-manager-plugin": "ContaoPageCookieBundle\\ContaoManager\\Plugin"
+    }
+}
