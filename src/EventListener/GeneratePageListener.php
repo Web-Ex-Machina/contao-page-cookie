@@ -8,11 +8,12 @@ use Contao\PageError403;
 use Contao\PageRegular;
 use Contao\LayoutModel;
 use Contao\PageModel;
+use ContaoPageCookieBundle\Classes\CookiesUtil;
 
 class GeneratePageListener
 {
     public function __invoke(PageModel $pageModel, LayoutModel $layout, PageRegular $pageRegular): void
-    {	
+    {
     	// Break if page does not require a cookie
         if (!$pageModel->cpc_protected) {
         	return;

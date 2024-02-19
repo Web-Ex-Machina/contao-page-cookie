@@ -11,7 +11,7 @@ class CookiesUtil
 {
     public static function setCookie($strName, $varValue, $intExpires)
     {
-        System::setCookie($strName, $varValue, $intExpires);
+        System::setCookie($strName, $varValue, (time() + $intExpires));
     }
 
     public static function getCookie($strName)

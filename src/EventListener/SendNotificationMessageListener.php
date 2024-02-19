@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace ContaoPageCookieBundle\EventListener;
 
+use ContaoPageCookieBundle\Model\FormCookie;
+
 class SendNotificationMessageListener
 {
     public function addTokens($objMessage, &$arrTokens, $strLanguage, $objGatewayModel)
