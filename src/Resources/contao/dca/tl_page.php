@@ -13,7 +13,7 @@ $GLOBALS['TL_DCA']['tl_page']['subpalettes']['cpc_protected'] = 'cpc_cookieName'
 // Adjust tl_form palettes
 PaletteManipulator::create()
     ->addField('cpc_protected', 'protected_legend', PaletteManipulator::POSITION_APPEND)
-    ->applyToPalette('default', 'tl_page')
+    ->applyToPalette('regular', 'tl_page')
 ;
 
 // Bundle fields
