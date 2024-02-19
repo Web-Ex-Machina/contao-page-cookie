@@ -1,0 +1,22 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="src/Resources/contao/languages/en/tl_page.php" source-language="en" target-language="fr">
+    <body>
+      <trans-unit id="tl_page.cpc_protected.0">
+        <source>Protected by cookie</source>
+        <target>Protégée par cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_page.cpc_protected.1">
+        <source>Check to make this page protected with cookie</source>
+        <target>Cocher pour protéger cette page avec un cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_page.cpc_cookieName.0">
+        <source>Cookie name</source>
+        <target>Nom du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_page.cpc_cookieName.1">
+        <source>Enter the wanted cookie name</source>
+        <target>Indiquez le nom du cookie souhaité</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

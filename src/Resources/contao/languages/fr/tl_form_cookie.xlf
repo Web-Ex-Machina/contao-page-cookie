@@ -1,0 +1,59 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="src/Resources/contao/languages/en/tl_form_cookie.php" source-language="en" target-language="fr">
+    <body>
+      <trans-unit id="tl_form_cookie.global_legend">
+        <source>Global settings</source>
+        <target>Paramètres globaux</target>
+      </trans-unit>
+
+      <trans-unit id="tl_form_cookie.name.0">
+        <source>Cookie name</source>
+        <target>Nom du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.name.1">
+        <source>Enter the cookie name</source>
+        <target>Indiquez le nom du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.value.0">
+        <source>Cookie value</source>
+        <target>Valeur du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.value.1">
+        <source>Enter the cookie value</source>
+        <target>Indiquez la valeur du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.duration.0">
+        <source>Cookie duration</source>
+        <target>Durée du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.duration.1">
+        <source>Enter the cookie duration</source>
+        <target>Indiquez la durée du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.createdAt.0">
+        <source>Created at</source>
+        <target>Créé le</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.createdAt.1">
+        <source>Enter the cookie creation date</source>
+        <target>Indiquez la date de création du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.token.0">
+        <source>Cookie token</source>
+        <target>Token du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.token.1">
+        <source>Enter the cookie token</source>
+        <target>Indiquez le token du cookie</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.active.0">
+        <source>Active</source>
+        <target>Actif</target>
+      </trans-unit>
+      <trans-unit id="tl_form_cookie.active.1">
+        <source>Check if the cookie is active</source>
+        <target>Cocher si le cookie est actif</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
