@@ -6,6 +6,12 @@ use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 // Add ctable to selector
 $GLOBALS['TL_DCA']['tl_form']['config']['ctable'][] = 'tl_form_cookie';
+
+// Add button to reach cookies
+$GLOBALS['TL_DCA']['tl_form']['list']['operations']['cpcookies'] = [
+	'href' => 'table=tl_form_cookie',
+	'icon' => 'modules.gif',
+];
  
 // Add checkbox to selector
 $GLOBALS['TL_DCA']['tl_form']['palettes']['__selector__'][] = 'cpc_generateCookie';
