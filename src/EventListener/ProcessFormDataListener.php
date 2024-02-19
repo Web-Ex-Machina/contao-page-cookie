@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace ContaoPageCookieBundle\EventListener;
 
-use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\Form;
 use ContaoPageCookieBundle\Classes\CookiesUtil;
+use ContaoPageCookieBundle\Model\FormCookie;
 
 class ProcessFormDataListener
 {
-    #[AsHook('processFormData')]
     public function generateCookie(array $submittedData, 
         array $formData, 
         ?array $files, 
@@ -31,7 +30,7 @@ class ProcessFormDataListener
         $objCookie->name = $form->cpc_cookieName;
         $objCookie->value = $form->cpc_cookieValue;
         $objCookie->duration = $form->cpc_cookieDuration;
-        $objCookie->token = random_bytes(16);
+        $objCookie->token = bin2hex(random_bytes(16));
         $objCookie->active = 'whenFormIsSubmitted' === $form->cpc_generateWhen ? '1' : '';
         $objCookie->save();
 

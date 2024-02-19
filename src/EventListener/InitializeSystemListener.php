@@ -4,14 +4,12 @@ declare(strict_types=1);
 
 namespace ContaoPageCookieBundle\EventListener;
 
-use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\Form;
 use ContaoPageCookieBundle\Classes\CookiesUtil;
 use ContaoPageCookieBundle\Model\FormCookie;
 
 class InitializeSystemListener
 {
-    #[AsHook('initializeSystem')]
     public function catchCookieToken(): void
     {
         if ($_GET['cpc_cookieToken']) {

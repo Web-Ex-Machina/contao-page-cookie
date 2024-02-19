@@ -4,17 +4,11 @@ declare(strict_types=1);
 
 namespace ContaoPageCookieBundle\EventListener;
 
-use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
-
 class SendNotificationMessageListener
 {
-    #[AsHook('sendNotificationMessage')]
     public function addTokens($objMessage, &$arrTokens, $strLanguage, $objGatewayModel)
     {
-        dump($objMessage);
-        die;
-
-        $objCookie = FormCookie::findOneByToken('bla');
+        $objCookie = FormCookie::findLastOneByPid($arrTokens['formconfig_id']);
 
         if (!$objCookie) {
             return true;
