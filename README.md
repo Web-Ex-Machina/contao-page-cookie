@@ -24,3 +24,10 @@ With the cookie token, you just have to add it as an URL argument, like `{{link_
 
 ## Useful links
 You can consult the [Changelog](CHANGELOG.md) here or submit issues in the [Github section](https://github.com/Web-Ex-Machina/contao-page-cookie/issues).
+
+## Possible enhancements
+* Use php session instead of database query to retrieve last form cookie generated (and pass the token to use as cookie value)
+* Add a cronjob to remove FormCookie entries (because either they have been already generated or they are not valid anymore)
+* Apply cookie protection behavior to every protected element, and not only pages
+* Add English translations
+* Allow settings to use dynamic vars from the data sent through the form
