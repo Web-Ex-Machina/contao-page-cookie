@@ -6,7 +6,7 @@ namespace ContaoPageCookieBundle\DataContainer;
 
 class FormCookieContainer
 {
-    public function listRows($r)
+    public function listRows($r): string
     {
         return sprintf(
             '%s / %s / %s - %s',

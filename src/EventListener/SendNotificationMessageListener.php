@@ -8,7 +8,7 @@ use ContaoPageCookieBundle\Model\FormCookie;
 
 class SendNotificationMessageListener
 {
-    public function addTokens($objMessage, &$arrTokens, $strLanguage, $objGatewayModel)
+    public function addTokens($objMessage, &$arrTokens, $strLanguage, $objGatewayModel): bool
     {
         $objCookie = FormCookie::findLastOneByPid($arrTokens['formconfig_id']);
 
