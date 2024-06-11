@@ -11,109 +11,109 @@
 use Contao\DataContainer;
 use Contao\DC_Table;
 
-$GLOBALS['TL_DCA']['tl_form_cookie'] = array
-(
+$GLOBALS['TL_DCA']['tl_form_cookie'] =
+    [
 	// Config
-	'config' => array
-	(
+	'config' =>
+        [
 		'dataContainer'               => DC_Table::class,
 		'enableVersioning'            => true,
 		'ptable'                      => 'tl_form',
-		'sql' => array
-		(
-			'keys' => array
-			(
+		'sql' =>
+            [
+			'keys' =>
+                [
 				'id' => 'primary',
 				'pid,active' => 'index'
-			)
-		)
-	),
+                ]
+            ]
+        ],
 
 	// List
-	'list' => array
-	(
-		'sorting' => array
-		(
+	'list' =>
+        [
+		'sorting' =>
+            [
 			'mode'                    => DataContainer::MODE_PARENT,
-			'fields'                  => array('createdAt'),
+			'fields'                  => ['createdAt'],
 			'panelLayout'             => 'filter;search,limit',
-			'headerFields'            => array('title', 'tstamp', 'formID', 'storeValues', 'sendViaEmail', 'recipient', 'subject'),
-			'child_record_callback'   => array(ContaoPageCookieBundle\DataContainer\FormCookieContainer::class, 'listRows')
-		),
-		'global_operations' => array
-		(
-			'all' => array
-			(
+			'headerFields'            => ['title', 'tstamp', 'formID', 'storeValues', 'sendViaEmail', 'recipient', 'subject'],
+			'child_record_callback'   => [ContaoPageCookieBundle\DataContainer\FormCookieContainer::class, 'listRows']
+            ],
+		'global_operations' =>
+            [
+			'all' =>
+                [
 				'href'                => 'act=select',
 				'class'               => 'header_edit_all',
 				'attributes'          => 'onclick="Backend.getScrollOffset()" accesskey="e"'
-			)
-		),
-		'operations' => array
-		(
-			'edit' => array
-			(
+                ]
+            ],
+		'operations' =>
+            [
+			'edit' =>
+                [
 				'href'                => 'act=edit',
 				'icon'                => 'edit.svg'
-			),
-			'delete' => array
-			(
+                ],
+			'delete' =>
+                [
 				'href'                => 'act=delete',
 				'icon'                => 'delete.svg',
 				'attributes'          => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
-			),
-			'toggle' => array
-			(
+                ],
+			'toggle' =>
+                [
 				'href'                => 'act=toggle&amp;field=active',
 				'icon'                => 'visible.svg'
-			),
-			'show' => array
-			(
+                ],
+			'show' =>
+                [
 				'href'                => 'act=show',
 				'icon'                => 'show.svg'
-			)
-		)
-	),
+                ]
+            ]
+        ],
 
 	// Palettes
-	'palettes' => array
-	(
+	'palettes' =>
+        [
 		'default'                     => '{global_legend},name,value,createdAt,duration,token,active',
-	),
+        ],
 
 	// Fields
-	'fields' => array
-	(
-		'id' => array
-		(
+	'fields' =>
+        [
+		'id' =>
+            [
 			'sql'                     => "int(10) unsigned NOT NULL auto_increment"
-		),
-		'pid' => array
-		(
+            ],
+		'pid' =>
+            [
 			'foreignKey'              => 'tl_form.title',
 			'sql'                     => "int(10) unsigned NOT NULL default 0",
-			'relation'                => array('type'=>'belongsTo', 'load'=>'lazy')
-		),
-		'tstamp' => array
-		(
+			'relation'                => ['type'=>'belongsTo', 'load'=>'lazy']
+            ],
+		'tstamp' =>
+            [
 			'sql'                     => "int(10) unsigned NOT NULL default 0"
-		),
-		'name' => array
-		(
+            ],
+		'name' =>
+            [
 			'exclude'                 => true,
 			'search'                  => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'rgxp'=>'alias', 'maxlength'=>255, 'tl_class'=>'w50 clr'),
+			'eval'                    => ['mandatory'=>true, 'rgxp'=>'alias', 'maxlength'=>255, 'tl_class'=>'w50 clr'],
 			'sql'                     => "varchar(255) NOT NULL default ''"
-		),
-		'value' => array
-		(
+            ],
+		'value' =>
+            [
 			'exclude'                 => true,
 			'search'                  => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'rgxp'=>'alias', 'maxlength'=>255, 'tl_class'=>'w50 clr'),
+			'eval'                    => ['mandatory'=>true, 'rgxp'=>'alias', 'maxlength'=>255, 'tl_class'=>'w50 clr'],
 			'sql'                     => "varchar(255) NOT NULL default ''"
-		),
+            ],
 		'createdAt' => [
             'exclude' => true,
             'inputType' => 'text',
@@ -128,7 +128,7 @@ $GLOBALS['TL_DCA']['tl_form_cookie'] = array
         'duration' => [
             'exclude' => true,
 			'inputType' => 'text',
-			'eval' => array('rgxp'=>'digit', 'mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+			'eval' => ['rgxp'=>'digit', 'mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'],
 			'sql' => "int(10) unsigned NOT NULL default 0"
         ],
 		'token' => [
@@ -141,13 +141,13 @@ $GLOBALS['TL_DCA']['tl_form_cookie'] = array
             'eval' => ['mandatory' => true, 'tl_class' => 'w50'],
             'sql' => "varchar(1024) NOT NULL default ''",
         ],
-		'active' => array
-		(
+		'active' =>
+            [
 			'exclude'                 => true,
 			'toggle'                  => true,
 			'filter'                  => true,
 			'inputType'               => 'checkbox',
 			'sql'                     => "char(1) NOT NULL default ''"
-		)
-	)
-);
+            ]
+        ]
+    ];
