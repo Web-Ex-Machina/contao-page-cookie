@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace ContaoPageCookieBundle\Classes;
 
 use Contao\System;
-use ContaoPageCookieBundle\Model\FormCookie;
 
 class CookiesUtil
 {
@@ -21,10 +20,6 @@ class CookiesUtil
 
     public static function hasCookie(?string $strName): bool
     {
-        if (null !== $_COOKIE[$strName]) {
-            return true;
-        }
-
-        return false;
+        return null !== $_COOKIE[$strName];
     }
 }
