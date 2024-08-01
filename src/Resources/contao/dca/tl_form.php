@@ -63,5 +63,6 @@ $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_hideIfActiveCookie'] = [
 	'exclude' => true,
 	'filter' => true,
 	'inputType' => 'checkbox',
+	'eval' => array('tl_class'=>'w50'),
 	'sql' => "char(1) NOT NULL default ''"
 ];
