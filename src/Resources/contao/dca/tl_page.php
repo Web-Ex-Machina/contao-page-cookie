@@ -21,12 +21,12 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cpc_protected'] = [
 	'exclude' => true,
 	'filter' => true,
 	'inputType' => 'checkbox',
-	'eval' => array('submitOnChange'=>true),
+	'eval' => ['submitOnChange'=>true],
 	'sql' => "char(1) NOT NULL default ''"
 ];
 $GLOBALS['TL_DCA']['tl_page']['fields']['cpc_cookieName'] = [
 	'exclude' => true,
 	'inputType' => 'text',
-	'eval' => array('rgxp'=>'alias', 'doNotCopy'=>true, 'mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+	'eval' => ['rgxp'=>'alias', 'doNotCopy'=>true, 'mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'],
 	'sql' => "varchar(255) NOT NULL default ''"
 ];

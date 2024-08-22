@@ -31,32 +31,32 @@ $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_generateCookie'] = [
 	'exclude' => true,
 	'filter' => true,
 	'inputType' => 'checkbox',
-	'eval' => array('submitOnChange'=>true),
+	'eval' => ['submitOnChange'=>true],
 	'sql' => "char(1) NOT NULL default ''"
 ];
 $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_cookieName'] = [
 	'exclude' => true,
 	'inputType' => 'text',
-	'eval' => array('rgxp'=>'alias', 'doNotCopy'=>true, 'mandatory'=>true, 'unique'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+	'eval' => ['rgxp'=>'alias', 'doNotCopy'=>true, 'mandatory'=>true, 'unique'=>true, 'maxlength'=>255, 'tl_class'=>'w50'],
 	'sql' => "varchar(255) NOT NULL default ''"
 ];
 $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_cookieValue'] = [
 	'exclude' => true,
 	'inputType' => 'text',
-	'eval' => array('rgxp'=>'alias', 'doNotCopy'=>true, 'mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+	'eval' => ['rgxp'=>'alias', 'doNotCopy'=>true, 'mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'],
 	'sql' => "varchar(255) NOT NULL default ''"
 ];
 $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_cookieDuration'] = [
 	'exclude' => true,
 	'inputType' => 'text',
-	'eval' => array('rgxp'=>'digit', 'mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+	'eval' => ['rgxp'=>'digit', 'mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'],
 	'sql' => "int(10) unsigned NOT NULL default 0"
 ];
 $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_generateWhen'] = [
 	'exclude' => true,
 	'inputType' => 'select',
 	'options' => ['whenFormIsSubmitted', 'whenProtectedPageIsReached'],
-	'eval' => array('helpwizard'=>true, 'tl_class'=>'w50'),
+	'eval' => ['helpwizard'=>true, 'tl_class'=>'w50'],
 	'sql' => "varchar(32) NOT NULL default 'raw'"
 ];
 $GLOBALS['TL_DCA']['tl_form']['fields']['cpc_hideIfActiveCookie'] = [

@@ -18,11 +18,11 @@ class FormCookie extends Model
     public static function findLastOneByPid($intPid)
     {
         $t = static::$strTable;
-        $arrColumns = array("$t.pid=?");
+        $arrColumns = [$t . '.pid=?'];
 
         if (!isset($arrOptions['order']))
         {
-            $arrOptions['order'] = "$t.createdAt DESC";
+            $arrOptions['order'] = $t . '.createdAt DESC';
         }
 
         return static::findOneBy($arrColumns, [$intPid], $arrOptions);

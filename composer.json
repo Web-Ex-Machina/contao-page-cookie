@@ -16,7 +16,9 @@
         "source":"https://github.com/webexmachina/contao-page-cookie"
     },
     "require": {
-        "contao/core-bundle": "^4.13",
+        "php": ">=7.4 || >=8.1",
+        "contao/core-bundle": "4.13.x || 5.3.x",
+        "contao/manager-plugin": "^2.0",
         "terminal42/notification_center": "^1.6"
     },
     "autoload":{
@@ -32,6 +34,9 @@
             "src/Resources/contao/languages/",
             "src/Resources/contao/templates/"
         ]
+    },
+    "require-dev": {
+        "rector/rector": "^1.0"
     },
     "extra":{
         "contao-manager-plugin": "ContaoPageCookieBundle\\ContaoManager\\Plugin"
