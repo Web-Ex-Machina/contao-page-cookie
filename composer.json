@@ -12,8 +12,9 @@
         }
     ],
     "support":{
-        "issues":"https://github.com/webexmachina/contao-page-cookie/issues",
-        "source":"https://github.com/webexmachina/contao-page-cookie"
+        "website":"https://www.webexmachina.fr/",
+        "issues":"https://github.com/web-ex-machina/contao-page-cookie/issues",
+        "source":"https://github.com/web-ex-machina/contao-page-cookie"
     },
     "require": {
         "php": ">=7.4 || >=8.1",
