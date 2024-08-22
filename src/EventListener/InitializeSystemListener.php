@@ -12,7 +12,7 @@ class InitializeSystemListener
 {
     public function catchCookieToken(): void
     {
-        if ($_GET['cpc_cookieToken']) {
+        if (array_key_exists('cpc_cookieToken', $_GET)) {
             // Check if we can find a cookie in the database
             $objCookie = FormCookie::findOneByToken($_GET['cpc_cookieToken']);
 
